@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:play_smash/shared/theme.dart';
+import 'package:play_smash/ui/pages/onboarding_page.dart';
 import 'package:play_smash/ui/pages/splash_page.dart';
 
 void main() {
@@ -13,11 +15,25 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Play Smash',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        scaffoldBackgroundColor: whiteColor,
+        appBarTheme: AppBarTheme(
+          backgroundColor: backgroundColor,
+          elevation: 0,
+          centerTitle: true,
+          iconTheme: IconThemeData(color: blackColor),
+          titleTextStyle: whiteTextStyle.copyWith(
+            fontSize: 20,
+            fontWeight: semiBold,
+          ),
+        ),
       ),
-      home: const SplashPage(),
+      // home: const SplashPage(),
+      routes: {
+        '/': (context) => const SplashPage(),
+        '/onboarding': (context) => OnboardingPage(),
+      },
     );
   }
 }
