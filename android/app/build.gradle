@@ -32,6 +32,11 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+
+        // Add this line to disable the default splash screen
+        manifestPlaceholders += [
+            'android.app.splash_screen_drawable': '@android:color/transparent'
+        ]
     }
 
     buildTypes {
