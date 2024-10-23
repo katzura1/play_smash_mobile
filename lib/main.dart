@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:play_smash/shared/theme.dart';
+import 'package:play_smash/ui/pages/onboarding_finish_page.dart';
 import 'package:play_smash/ui/pages/onboarding_page.dart';
 import 'package:play_smash/ui/pages/splash_page.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: backgroundColor,
           elevation: 0,
           centerTitle: true,
-          iconTheme: IconThemeData(color: blackColor),
+          iconTheme: const IconThemeData(color: blackColor),
           titleTextStyle: whiteTextStyle.copyWith(
             fontSize: 20,
             fontWeight: semiBold,
@@ -32,7 +33,9 @@ class MyApp extends StatelessWidget {
       // home: const SplashPage(),
       routes: {
         '/': (context) => const SplashPage(),
-        '/onboarding': (context) => OnboardingPage(),
+        '/onboarding': (context) => const OnboardingPage(),
+        '/onboarding-finish': (context) => const OnboardingFinishPage(),
+        // '/login': (context) => const LoginPage(),
       },
     );
   }

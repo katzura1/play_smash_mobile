@@ -63,10 +63,17 @@ class _OnboardingPageState extends State<OnboardingPage> {
           ],
         ),
       ),
-      floatingActionButton: const Padding(
-        padding: EdgeInsets.all(30),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.all(30),
         child: PrimaryButton(
           title: "Get Started",
+          onPressed: () {
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              '/onboarding-finish',
+              (route) => false,
+            );
+          },
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
