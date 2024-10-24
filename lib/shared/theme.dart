@@ -19,18 +19,18 @@ FontWeight extraBold = FontWeight.w800;
 FontWeight black = FontWeight.w900;
 
 //text style
-TextStyle whiteTextStyle = GoogleFonts.roboto(
+TextStyle whiteTextStyle = GoogleFonts.poppins(
   color: whiteColor,
 );
 
-TextStyle primaryTextStyle = GoogleFonts.roboto(
+TextStyle primaryTextStyle = GoogleFonts.poppins(
   color: primaryColor,
 );
 
-TextStyle blackTextStyle = GoogleFonts.roboto(
+TextStyle blackTextStyle = GoogleFonts.poppins(
   color: blackColor,
 );
 
-TextStyle grayTextStyle = GoogleFonts.roboto(
+TextStyle grayTextStyle = GoogleFonts.poppins(
   color: grayColor,
 );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:play_smash/shared/theme.dart';
 import 'package:play_smash/ui/pages/onboarding_finish_page.dart';
 import 'package:play_smash/ui/pages/onboarding_page.dart';
+import 'package:play_smash/ui/pages/register_page.dart';
 import 'package:play_smash/ui/pages/splash_page.dart';
 
 void main() {
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const SplashPage(),
         '/onboarding': (context) => const OnboardingPage(),
         '/onboarding-finish': (context) => const OnboardingFinishPage(),
+        '/register': (context) => const RegisterPage(),
         // '/login': (context) => const LoginPage(),
       },
     );

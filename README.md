@@ -1,6 +1,8 @@
 # play_smash
 
-A new Flutter project.
+Aplikasi sewa lapangan badminton dibuat dengan flutter.
+
+- [UI Design](https://www.figma.com/design/Hm2aoGn0JGMPSsgTFczDte/PlaySmash-Mobile-App?node-id=5-106&t=6sBK2KtJjuJwyNEc-1)
 
 ## Getting Started
 

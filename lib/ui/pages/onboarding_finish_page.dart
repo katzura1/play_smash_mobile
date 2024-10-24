@@ -25,11 +25,11 @@ class _OnboardingFinishPageState extends State<OnboardingFinishPage> {
               ),
             ),
           ),
-          const Column(
+          Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 30.0,
                   vertical: 22.0,
                 ),
@@ -39,19 +39,27 @@ class _OnboardingFinishPageState extends State<OnboardingFinishPage> {
                     WhiteButton(
                       title: "Register",
                       width: 170,
+                      onPressed: () {
+                        Navigator.pushNamedAndRemoveUntil(
+                          context,
+                          '/register',
+                          (route) => false,
+                        );
+                      },
                     ),
                     PrimaryButton(
                       title: "Login",
                       width: 170,
+                      onPressed: () {},
                     ),
                   ],
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(
                   left: 30.0,
                   right: 30.0,
-                  bottom: 22.0,
+                  bottom: 55.0,
                 ),
                 child: WhiteButton(
                   title: "Login with Google",
