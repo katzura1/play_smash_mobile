@@ -10,6 +10,7 @@ class CustomInputText extends StatelessWidget {
   final bool isValid;
   final TextEditingController controller;
   final TextInputType? keyboardType;
+  final TextInputAction textInputAction;
   final Function(String)? onFieldSubmited;
   final Function(String)? onChanged;
 
@@ -21,6 +22,7 @@ class CustomInputText extends StatelessWidget {
     required this.controller,
     this.isShowTitle = true,
     this.isValid = true,
+    this.textInputAction = TextInputAction.next,
     this.keyboardType,
     this.onFieldSubmited,
     this.onChanged,
@@ -29,7 +31,7 @@ class CustomInputText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 37),
+      padding: const EdgeInsets.only(top: 20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,9 +51,6 @@ class CustomInputText extends StatelessWidget {
               obscureText: false,
               decoration: InputDecoration(
                 hintText: hintText,
-                hintStyle: TextStyle(
-                  color: !isValid ? Colors.red : grayColor,
-                ), // Warna hint/placeholder
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(
@@ -71,6 +70,7 @@ class CustomInputText extends StatelessWidget {
               keyboardType: keyboardType,
               onFieldSubmitted: onFieldSubmited,
               onChanged: onChanged,
+              textInputAction: textInputAction,
             ),
           ),
         ],
