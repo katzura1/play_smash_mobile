@@ -48,6 +48,7 @@ class _LoginPageState extends State<LoginPage> {
             title: "Email",
             hintText: "Enter your email",
             controller: emailController,
+            keyboardType: TextInputType.emailAddress,
             isValid: isValidEmail,
             onChanged: (text) {
               setState(() {
@@ -92,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
+                    Navigator.pushNamedAndRemoveUntil(context, '/reset-password', (route) => false);
                   },
                   child: const Text(
                     "Reset Password",

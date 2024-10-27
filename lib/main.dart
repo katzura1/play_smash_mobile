@@ -4,7 +4,9 @@ import 'package:play_smash/ui/pages/login_page.dart';
 import 'package:play_smash/ui/pages/onboarding_finish_page.dart';
 import 'package:play_smash/ui/pages/onboarding_page.dart';
 import 'package:play_smash/ui/pages/register_page.dart';
+import 'package:play_smash/ui/pages/reset_password_page.dart';
 import 'package:play_smash/ui/pages/splash_page.dart';
+import 'package:play_smash/ui/pages/verify_account_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,6 +41,8 @@ class MyApp extends StatelessWidget {
         '/onboarding-finish': (context) => const OnboardingFinishPage(),
         '/register': (context) => const RegisterPage(),
         '/login': (context) => const LoginPage(),
+        '/reset-password': (context) => const ResetPasswordPage(),
+        '/verify-account': (context) => const VerifyAccountPage()
       },
     );
   }

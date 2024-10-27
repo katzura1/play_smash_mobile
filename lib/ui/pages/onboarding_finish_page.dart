@@ -50,7 +50,13 @@ class _OnboardingFinishPageState extends State<OnboardingFinishPage> {
                     PrimaryButton(
                       title: "Login",
                       width: 170,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamedAndRemoveUntil(
+                          context,
+                          '/login',
+                          (route) => false,
+                        );
+                      },
                     ),
                   ],
                 ),

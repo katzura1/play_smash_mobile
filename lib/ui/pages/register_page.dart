@@ -90,12 +90,13 @@ class _RegisterPageState extends State<RegisterPage> {
               });
             },
           ),
-          const Padding(
-            padding: EdgeInsets.only(
+          Padding(
+            padding: const EdgeInsets.only(
               top: 20,
             ),
             child: PrimaryButton(
               title: "Register",
+              onPressed: () {},
             ),
           ),
           Padding(
