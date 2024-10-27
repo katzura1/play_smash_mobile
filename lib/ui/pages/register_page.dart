@@ -94,19 +94,19 @@ class _RegisterPageState extends State<RegisterPage> {
             padding: EdgeInsets.only(
               top: 20,
             ),
-            child: const PrimaryButton(
+            child: PrimaryButton(
               title: "Register",
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               top: 10,
             ),
             child: InkWell(
               onTap: () {
                 Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
               },
-              child: Text(
+              child: const Text(
                 "Login",
               ),
             ),
@@ -124,6 +124,7 @@ class _RegisterPageState extends State<RegisterPage> {
           const Padding(
             padding: EdgeInsets.only(
               top: 10,
+              bottom: 20,
             ),
             child: WhiteButton(
               title: "Register with Google",
